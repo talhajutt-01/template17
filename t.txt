@@ -1,0 +1,118 @@
+{
+    "title": {
+        "title": "Updated Caraft"
+    },
+     "nav": {
+        "nav0": "Home",
+        "nav1": "Category",
+        "nav2": "Products",
+        "nav3": "Client",
+        "nav4": "Contact Us"
+     },
+
+      "banner": {
+        "h0": "update Discount Online Shop",
+        "h1": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration",
+        "h2": "Shop Now",
+        "h3": "update Discount Online Shop",
+        "h4": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration",
+        "h5": "Shop Now",
+        "h6": "update Discount Online Shop",
+        "h7": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration",
+        "h8": "Shop Now"
+    },
+
+    "category": {
+        "c0": "updated Category",
+        "c1": "updated New Fashion",
+        "c2": "Clothing",
+        "c3": "Watches",
+        "c4": "Accessories",
+        "c5": "Sweaters and Jackets",
+        "c6": "Up to 50% off | Beds",
+        "c7": "see More",
+        "c8": "organized in style",
+        "c9": "see More",
+        "c10": "Refurbished mixer",
+        "c11": "see More"
+    },
+
+        "beauty": {
+        "b0": "updated Beauty products",
+        "b1": "see More",
+        "b2": "Explore trending electronics",
+        "b3": "see More"
+    },
+
+        "product": {
+        "p0": "updated FEATURED PRODUCTS",
+        "p1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
+        "p2": "Readable content of",
+        "p3": "Readable content of",
+        "p4": "Readable content of",
+        "p5": "see More"
+    },
+
+    "client": {
+        "u0": "update what is says our customer",
+        "u1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
+        "u2": "Normal distribution",
+        "u3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look",
+        "u4": "update FEATURED PRODUCTS",
+        "u5": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
+        "u6": "Normal distribution",
+        "u7": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look",
+        "u8": "update FEATURED PRODUCTS",
+        "u9": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
+        "u10": "Normal distribution",
+        "u11": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look" 
+    },
+
+    "newsletter": {
+        "n0": "update Connect to caraft",
+        "n1": "Join Our Newsletter",
+        "n2": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration"
+    },
+
+     "footer": {
+        "f0": "update Category",
+        "f1": "update Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        "f2": "Useful Links",
+        "f3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It",
+        "f4": "Contact Us",
+        "f5": "+01 1234567890",
+        "f6": "+01 9876543210",
+        "f7": "demo@gmail.com",
+        "f8": " Copyright 2020 All Right Reserved",
+        "f9": "Free Html Templates"
+     },
+
+     "color": {
+        "nav": "grey",
+        "category": "red",
+        "beauty": "red",
+        "product": "red",
+        "client": "red",
+        "newsletter": "grey",
+        "footer": "red"
+    },
+
+    "images": {
+        "img1": "images/logo.png",
+        "img2": "images/img-1.png",
+        "img3": "images/img-1.png",
+        "img4": "images/img-1.png",
+        "img5": "images/img-2.png",
+        "img6": "images/img-3.png",
+        "img7": "images/img-4.png",
+        "img8": "images/img-5.png",
+        "img9": "images/img-6.png",
+        "img10": "images/img-7.png",
+        "img11": "images/img-7.png",
+        "img12": "images/img-8.png",
+        "img13": "images/img-9.png",
+        "img14": "images/img-9.png",
+        "img15": "images/img-9.png"
+    }
+
+}
