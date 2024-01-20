@@ -1,0 +1,19 @@
+{
+     "images": {
+        "img1": "images/logo.png",
+        "img2": "images/img-1.png",
+        "img3": "images/img-1.png",
+        "img4": "images/img-1.png",
+        "img5": "images/img-2.png",
+        "img6": "images/img-3.png",
+        "img7": "images/img-4.png",
+        "img8": "images/img-5.png",
+        "img9": "images/img-6.png",
+        "img10": "images/img-7.png",
+        "img11": "images/img-7.png",
+        "img12": "images/img-8.png",
+        "img13": "images/img-9.png",
+        "img14": "images/img-9.png",
+        "img15": "images/img-9.png"
+    }
+}

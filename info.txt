@@ -1,7 +1,9 @@
 {
+    //used to change the text of title at index.html 
     "title": {
         "title": "Updated Caraft"
     },
+    // identify that you can manipulate the elements of navbar nav0 is the first element and so on
      "nav": {
         "nav0": "Home",
         "nav1": "Category",
@@ -9,7 +11,7 @@
         "nav3": "Client",
         "nav4": "Contact Us"
      },
-
+     // modify the elemnts of banner each banner have 3 elemnts 2 for text one as a button i.e h2,h5,h6
       "banner": {
         "h0": "update Discount Online Shop",
         "h1": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration",
@@ -21,7 +23,7 @@
         "h7": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration",
         "h8": "Shop Now"
     },
-
+    //modify the elemnts of category section and it contain text and button i.e c7,c9,c11
     "category": {
         "c0": "updated Category",
         "c1": "updated New Fashion",
@@ -36,14 +38,14 @@
         "c10": "Refurbished mixer",
         "c11": "see More"
     },
-
+   // modify the elemnts of beauty section and it contain text and button i.e b1,b3
         "beauty": {
         "b0": "updated Beauty products",
         "b1": "see More",
         "b2": "Explore trending electronics",
         "b3": "see More"
     },
-
+    //modify the elemnts of product section
         "product": {
         "p0": "updated FEATURED PRODUCTS",
         "p1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
@@ -52,7 +54,7 @@
         "p4": "Readable content of",
         "p5": "see More"
     },
-
+    //modify the elemnts of client section
     "client": {
         "u0": "update what is says our customer",
         "u1": "It is a long established fact that a reader will be distracted by the readable content of a page when looking",
@@ -67,13 +69,13 @@
         "u10": "Normal distribution",
         "u11": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look" 
     },
-
+    //modify the elemnts of newsletter section
     "newsletter": {
         "n0": "update Connect to caraft",
         "n1": "Join Our Newsletter",
         "n2": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration"
     },
-
+    //modify the elemnts of footer section
      "footer": {
         "f0": "update Category",
         "f1": "update Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
@@ -86,7 +88,7 @@
         "f8": " Copyright 2020 All Right Reserved",
         "f9": "Free Html Templates"
      },
-
+   //modify the color scheme of the web the key is idcating the section of which the color is going to change
      "color": {
         "nav": "grey",
         "category": "red",
@@ -98,10 +100,11 @@
     },
 
     "images": {
-        //manipulate the image of logo at header
+
+        //manipulate the image of logo at header 
         "img1": "images/logo.png",
 
-        //manipulate the image of banner at banner
+        //manipulate the image of banner 
         "img2": "images/img-1.png",
         "img3": "images/img-1.png",
         "img4": "images/img-1.png",
@@ -110,13 +113,17 @@
         "img5": "images/img-2.png",
         "img6": "images/img-3.png",
         "img7": "images/img-4.png",
+
+        //manipulate the image of beauty 
         "img8": "images/img-5.png",
         "img9": "images/img-6.png",
 
-        //manipulate the image of category 
+        //manipulate the image of product 
         "img10": "images/img-7.png",
         "img11": "images/img-7.png",
         "img12": "images/img-8.png",
+
+        //manipulate the image of client 
         "img13": "images/img-9.png",
         "img14": "images/img-9.png",
         "img15": "images/img-9.png"
