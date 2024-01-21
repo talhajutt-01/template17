@@ -29,6 +29,11 @@ const c9 = document.getElementById('c9');
 const c10 = document.getElementById('c10');
 const c11 = document.getElementById('c11');
 
+const b0 = document.getElementById('b0');
+const b1 = document.getElementById('b1');
+const b2 = document.getElementById('b2');
+const b3 = document.getElementById('b3');
+
 const p0 = document.getElementById('p0');
 const p1 = document.getElementById('p1');
 const p2 = document.getElementById('p2');
@@ -116,10 +121,18 @@ function updateBackgroundColor(element, newColor) {
   // Fetch JSON data from the text file
   function updatePageContent(pageName) {
     console.log('Updating content for page:', pageName);
-    fetch('t.txt')
-        .then(response => response.json())
-        .then(jsonData => {
-            // Update content based on the current page
+    const fetchJson1 = fetch('t.txt')
+    .then(response => response.json());
+
+// Fetch the second JSON file
+const fetchJson2 = fetch('image.txt')
+    .then(response => response.json());
+
+// Wait for both fetch operations to complete
+Promise.all([fetchJson1, fetchJson2])
+    .then(jsonDataArray => {
+        // Merge the data from both JSON files
+        const mergedData = Object.assign({}, ...jsonDataArray);
             
            
            
@@ -128,212 +141,212 @@ function updateBackgroundColor(element, newColor) {
 
             if (fileName === 'index.html' || fileName === '') {
 
-                updateContent(title, jsonData.title.title);
+                updateContent(title, mergedData.title.title);
 
 
-                updateLinkContent(nav0, jsonData.nav.nav0);
-                updateLinkContent(nav1, jsonData.nav.nav1);
-                updateLinkContent(nav2, jsonData.nav.nav2);
-                updateLinkContent(nav3, jsonData.nav.nav3);
-                updateLinkContent(nav4, jsonData.nav.nav4);
+                updateLinkContent(nav0, mergedData.nav.nav0);
+                updateLinkContent(nav1, mergedData.nav.nav1);
+                updateLinkContent(nav2, mergedData.nav.nav2);
+                updateLinkContent(nav3, mergedData.nav.nav3);
+                updateLinkContent(nav4, mergedData.nav.nav4);
 
                 
-                updateContent(h0, jsonData.banner.h0);
-                updateContent(h1, jsonData.banner.h1);
-                updateContent(h2, jsonData.banner.h2);
-                updateContent(h3, jsonData.banner.h3);
-                updateContent(h4, jsonData.banner.h4);
-                updateContent(h5, jsonData.banner.h5);
-                updateContent(h6, jsonData.banner.h6);
-                updateContent(h7, jsonData.banner.h7);
-                updateContent(h8, jsonData.banner.h8);
+                updateContent(h0, mergedData.banner.h0);
+                updateContent(h1, mergedData.banner.h1);
+                updateContent(h2, mergedData.banner.h2);
+                updateContent(h3, mergedData.banner.h3);
+                updateContent(h4, mergedData.banner.h4);
+                updateContent(h5, mergedData.banner.h5);
+                updateContent(h6, mergedData.banner.h6);
+                updateContent(h7, mergedData.banner.h7);
+                updateContent(h8, mergedData.banner.h8);
 
-                updateContent(c0, jsonData.category.c0);
-                updateContent(c1, jsonData.category.c1);
-                updateContent(c2, jsonData.category.c2);
-                updateContent(c3, jsonData.category.c3);
-                updateContent(c4, jsonData.category.c4);
-                updateContent(c5, jsonData.category.c5);
-                updateContent(c6, jsonData.category.c6);
-                updateContent(c7, jsonData.category.c7);
-                updateContent(c8, jsonData.category.c8);
-                updateContent(c9, jsonData.category.c9);
-                updateContent(c10, jsonData.category.c10);
-                updateContent(c11, jsonData.category.c11);
+                updateContent(c0, mergedData.category.c0);
+                updateContent(c1, mergedData.category.c1);
+                updateContent(c2, mergedData.category.c2);
+                updateContent(c3, mergedData.category.c3);
+                updateContent(c4, mergedData.category.c4);
+                updateContent(c5, mergedData.category.c5);
+                updateContent(c6, mergedData.category.c6);
+                updateContent(c7, mergedData.category.c7);
+                updateContent(c8, mergedData.category.c8);
+                updateContent(c9, mergedData.category.c9);
+                updateContent(c10, mergedData.category.c10);
+                updateContent(c11, mergedData.category.c11);
 
-                updateContent(b0, jsonData.beauty.b0);
-                updateContent(b1, jsonData.beauty.b1);
-                updateContent(b2, jsonData.beauty.b2);
-                updateContent(b3, jsonData.beauty.b3);
+                updateContent(b0, mergedData.beauty.b0);
+                updateContent(b1, mergedData.beauty.b1);
+                updateContent(b2, mergedData.beauty.b2);
+                updateContent(b3, mergedData.beauty.b3);
     
-                updateContent(p0, jsonData.product.p0);
-                updateContent(p1, jsonData.product.p1);
-                updateContent(p2, jsonData.product.p2);
-                updateContent(p3, jsonData.product.p3);
-                updateContent(p4, jsonData.product.p4);
-                updateContent(p5, jsonData.product.p5);
+                updateContent(p0, mergedData.product.p0);
+                updateContent(p1, mergedData.product.p1);
+                updateContent(p2, mergedData.product.p2);
+                updateContent(p3, mergedData.product.p3);
+                updateContent(p4, mergedData.product.p4);
+                updateContent(p5, mergedData.product.p5);
 
-                updateContent(u1, jsonData.client.u1);
-                updateContent(u2, jsonData.client.u2);
-                updateContent(u3, jsonData.client.u3);
-                updateContent(u4, jsonData.client.u4);
-                updateContent(u5, jsonData.client.u5);
-                updateContent(u6, jsonData.client.u6);
-                updateContent(u7, jsonData.client.u7);
-                updateContent(u8, jsonData.client.u8);
-                updateContent(u9, jsonData.client.u9);
-                updateContent(u10, jsonData.client.u10);
-                updateContent(u11, jsonData.client.u11);
+                updateContent(u1, mergedData.client.u1);
+                updateContent(u2, mergedData.client.u2);
+                updateContent(u3, mergedData.client.u3);
+                updateContent(u4, mergedData.client.u4);
+                updateContent(u5, mergedData.client.u5);
+                updateContent(u6, mergedData.client.u6);
+                updateContent(u7, mergedData.client.u7);
+                updateContent(u8, mergedData.client.u8);
+                updateContent(u9, mergedData.client.u9);
+                updateContent(u10, mergedData.client.u10);
+                updateContent(u11, mergedData.client.u11);
     
-                updateContent(n0, jsonData.newsletter.n0);
-                updateContent(n1, jsonData.newsletter.n1);
-                updateContent(n2, jsonData.newsletter.n2);
+                updateContent(n0, mergedData.newsletter.n0);
+                updateContent(n1, mergedData.newsletter.n1);
+                updateContent(n2, mergedData.newsletter.n2);
 
             
-                updateContent(f0, jsonData.footer.f0);
-                updateContent(f1, jsonData.footer.f1);
-                updateContent(f2, jsonData.footer.f2);
-                updateContent(f3, jsonData.footer.f3);
-                updateContent(f4, jsonData.footer.f4);
-                updateContent(f5, jsonData.footer.f5);
-                updateContent(f6, jsonData.footer.f6);
-                updateContent(f7, jsonData.footer.f7);
-                updateContent(f8, jsonData.footer.f8);
-                updateContent(f9, jsonData.footer.f9);
+                updateContent(f0, mergedData.footer.f0);
+                updateContent(f1, mergedData.footer.f1);
+                updateContent(f2, mergedData.footer.f2);
+                updateContent(f3, mergedData.footer.f3);
+                updateContent(f4, mergedData.footer.f4);
+                updateContent(f5, mergedData.footer.f5);
+                updateContent(f6, mergedData.footer.f6);
+                updateContent(f7, mergedData.footer.f7);
+                updateContent(f8, mergedData.footer.f8);
+                updateContent(f9, mergedData.footer.f9);
 
     
-                updateBackgroundColor(g0, jsonData.color.nav);
-                updateBackgroundColor(g1, jsonData.color.category);
-                updateBackgroundColor(g2, jsonData.color.beauty);
-                updateBackgroundColor(g3, jsonData.color.product);
-                updateBackgroundColor(g4, jsonData.color.client);
-                updateBackgroundColor(g5, jsonData.color.newsletter);
-                updateBackgroundColor(g6, jsonData.color.footer);
+                updateBackgroundColor(g0, mergedData.color.nav);
+                updateBackgroundColor(g1, mergedData.color.category);
+                updateBackgroundColor(g2, mergedData.color.beauty);
+                updateBackgroundColor(g3, mergedData.color.product);
+                updateBackgroundColor(g4, mergedData.color.client);
+                updateBackgroundColor(g5, mergedData.color.newsletter);
+                updateBackgroundColor(g6, mergedData.color.footer);
              
-                updateImageSrc(img1, jsonData.images.img1);
-                updateImageSrc(img2, jsonData.images.img2);
-                updateImageSrc(img3, jsonData.images.img3);
-                updateImageSrc(img4, jsonData.images.img4);
-                updateImageSrc(img5, jsonData.images.img5);
-                updateImageSrc(img6, jsonData.images.img6);
-                updateImageSrc(img7, jsonData.images.img7);
-                updateImageSrc(img8, jsonData.images.img8);
-                updateImageSrc(img9, jsonData.images.img9);
-                updateImageSrc(img10, jsonData.images.img10);
-                updateImageSrc(img11, jsonData.images.img11);
-                updateImageSrc(img12, jsonData.images.img12);
-                updateImageSrc(img13, jsonData.images.img13);
-                updateImageSrc(img14, jsonData.images.img14);
-                updateImageSrc(img15, jsonData.images.img15);
+                updateImageSrc(img1, mergedData.images.img1);
+                updateImageSrc(img2, mergedData.images.img2);
+                updateImageSrc(img3, mergedData.images.img3);
+                updateImageSrc(img4, mergedData.images.img4);
+                updateImageSrc(img5, mergedData.images.img5);
+                updateImageSrc(img6, mergedData.images.img6);
+                updateImageSrc(img7, mergedData.images.img7);
+                updateImageSrc(img8, mergedData.images.img8);
+                updateImageSrc(img9, mergedData.images.img9);
+                updateImageSrc(img10, mergedData.images.img10);
+                updateImageSrc(img11, mergedData.images.img11);
+                updateImageSrc(img12, mergedData.images.img12);
+                updateImageSrc(img13, mergedData.images.img13);
+                updateImageSrc(img14, mergedData.images.img14);
+                updateImageSrc(img15, mergedData.images.img15);
         
 
             }   else if (fileName === 'contact.html') {
-                updateLinkContent(nav0, jsonData.nav.nav0);
-                updateLinkContent(nav1, jsonData.nav.nav1);
-                updateLinkContent(nav2, jsonData.nav.nav2);
-                updateLinkContent(nav3, jsonData.nav.nav3);
-                updateLinkContent(nav4, jsonData.nav.nav4);
-                updateContent(f0, jsonData.footer.f0);
-                updateContent(f1, jsonData.footer.f1);
-                updateContent(f2, jsonData.footer.f2);
-                updateContent(f3, jsonData.footer.f3);
-                updateContent(f4, jsonData.footer.f4);
-                updateContent(f5, jsonData.footer.f5);
-                updateContent(f6, jsonData.footer.f6);
-                updateContent(f7, jsonData.footer.f7);
-                updateContent(f8, jsonData.footer.f8);
-                updateContent(f9, jsonData.footer.f9);
-                updateBackgroundColor(g0, jsonData.color.nav);
-                updateBackgroundColor(g6, jsonData.color.footer);
+                updateLinkContent(nav0, mergedData.nav.nav0);
+                updateLinkContent(nav1, mergedData.nav.nav1);
+                updateLinkContent(nav2, mergedData.nav.nav2);
+                updateLinkContent(nav3, mergedData.nav.nav3);
+                updateLinkContent(nav4, mergedData.nav.nav4);
+                updateContent(f0, mergedData.footer.f0);
+                updateContent(f1, mergedData.footer.f1);
+                updateContent(f2, mergedData.footer.f2);
+                updateContent(f3, mergedData.footer.f3);
+                updateContent(f4, mergedData.footer.f4);
+                updateContent(f5, mergedData.footer.f5);
+                updateContent(f6, mergedData.footer.f6);
+                updateContent(f7, mergedData.footer.f7);
+                updateContent(f8, mergedData.footer.f8);
+                updateContent(f9, mergedData.footer.f9);
+                updateBackgroundColor(g0, mergedData.color.nav);
+                updateBackgroundColor(g6, mergedData.color.footer);
 
             } else if (fileName === 'category.html') {
-                updateLinkContent(nav0, jsonData.nav.nav0);
-                updateLinkContent(nav1, jsonData.nav.nav1);
-                updateLinkContent(nav2, jsonData.nav.nav2);
-                updateLinkContent(nav3, jsonData.nav.nav3);
-                updateLinkContent(nav4, jsonData.nav.nav4);
-                updateContent(c0, jsonData.category.c0);
-                updateContent(c1, jsonData.category.c1);
-                updateContent(c2, jsonData.category.c2);
-                updateContent(c3, jsonData.category.c3);
-                updateContent(c4, jsonData.category.c4);
-                updateContent(c5, jsonData.category.c5);
-                updateContent(c6, jsonData.category.c6);
-                updateContent(c7, jsonData.category.c7);
-                updateContent(c8, jsonData.category.c8);
-                updateContent(c9, jsonData.category.c9);
-                updateContent(c10, jsonData.category.c10);
-                updateContent(c11, jsonData.category.c11);
-                updateContent(f0, jsonData.footer.f0);
-                updateContent(f1, jsonData.footer.f1);
-                updateContent(f2, jsonData.footer.f2);
-                updateContent(f3, jsonData.footer.f3);
-                updateContent(f4, jsonData.footer.f4);
-                updateContent(f5, jsonData.footer.f5);
-                updateContent(f6, jsonData.footer.f6);
-                updateContent(f7, jsonData.footer.f7);
-                updateContent(f8, jsonData.footer.f8);
-                updateContent(f9, jsonData.footer.f9);
-                updateBackgroundColor(g0, jsonData.color.nav);
-                updateBackgroundColor(g1, jsonData.color.category);
-                updateBackgroundColor(g6, jsonData.color.footer);
+                updateLinkContent(nav0, mergedData.nav.nav0);
+                updateLinkContent(nav1, mergedData.nav.nav1);
+                updateLinkContent(nav2, mergedData.nav.nav2);
+                updateLinkContent(nav3, mergedData.nav.nav3);
+                updateLinkContent(nav4, mergedData.nav.nav4);
+                updateContent(c0, mergedData.category.c0);
+                updateContent(c1, mergedData.category.c1);
+                updateContent(c2, mergedData.category.c2);
+                updateContent(c3, mergedData.category.c3);
+                updateContent(c4, mergedData.category.c4);
+                updateContent(c5, mergedData.category.c5);
+                updateContent(c6, mergedData.category.c6);
+                updateContent(c7, mergedData.category.c7);
+                updateContent(c8, mergedData.category.c8);
+                updateContent(c9, mergedData.category.c9);
+                updateContent(c10, mergedData.category.c10);
+                updateContent(c11, mergedData.category.c11);
+                updateContent(f0, mergedData.footer.f0);
+                updateContent(f1, mergedData.footer.f1);
+                updateContent(f2, mergedData.footer.f2);
+                updateContent(f3, mergedData.footer.f3);
+                updateContent(f4, mergedData.footer.f4);
+                updateContent(f5, mergedData.footer.f5);
+                updateContent(f6, mergedData.footer.f6);
+                updateContent(f7, mergedData.footer.f7);
+                updateContent(f8, mergedData.footer.f8);
+                updateContent(f9, mergedData.footer.f9);
+                updateBackgroundColor(g0, mergedData.color.nav);
+                updateBackgroundColor(g1, mergedData.color.category);
+                updateBackgroundColor(g6, mergedData.color.footer);
 
             } else if (fileName === 'clients.html') {
-                updateLinkContent(nav0, jsonData.nav.nav0);
-                updateLinkContent(nav1, jsonData.nav.nav1);
-                updateLinkContent(nav2, jsonData.nav.nav2);
-                updateLinkContent(nav3, jsonData.nav.nav3);
-                updateLinkContent(nav4, jsonData.nav.nav4);
-                updateContent(u1, jsonData.client.u1);
-                updateContent(u2, jsonData.client.u2);
-                updateContent(u3, jsonData.client.u3);
-                updateContent(u4, jsonData.client.u4);
-                updateContent(u5, jsonData.client.u5);
-                updateContent(u6, jsonData.client.u6);
-                updateContent(u7, jsonData.client.u7);
-                updateContent(u8, jsonData.client.u8);
-                updateContent(u9, jsonData.client.u9);
-                updateContent(u10, jsonData.client.u10);
-                updateContent(u11, jsonData.client.u11);
-                updateContent(f0, jsonData.footer.f0);
-                updateContent(f1, jsonData.footer.f1);
-                updateContent(f2, jsonData.footer.f2);
-                updateContent(f3, jsonData.footer.f3);
-                updateContent(f4, jsonData.footer.f4);
-                updateContent(f5, jsonData.footer.f5);
-                updateContent(f6, jsonData.footer.f6);
-                updateContent(f7, jsonData.footer.f7);
-                updateContent(f8, jsonData.footer.f8);
-                updateContent(f9, jsonData.footer.f9);
-                updateBackgroundColor(g0, jsonData.color.nav);
-                updateBackgroundColor(g4, jsonData.color.client);
-                updateBackgroundColor(g6, jsonData.color.footer);
+                updateLinkContent(nav0, mergedData.nav.nav0);
+                updateLinkContent(nav1, mergedData.nav.nav1);
+                updateLinkContent(nav2, mergedData.nav.nav2);
+                updateLinkContent(nav3, mergedData.nav.nav3);
+                updateLinkContent(nav4, mergedData.nav.nav4);
+                updateContent(u1, mergedData.client.u1);
+                updateContent(u2, mergedData.client.u2);
+                updateContent(u3, mergedData.client.u3);
+                updateContent(u4, mergedData.client.u4);
+                updateContent(u5, mergedData.client.u5);
+                updateContent(u6, mergedData.client.u6);
+                updateContent(u7, mergedData.client.u7);
+                updateContent(u8, mergedData.client.u8);
+                updateContent(u9, mergedData.client.u9);
+                updateContent(u10, mergedData.client.u10);
+                updateContent(u11, mergedData.client.u11);
+                updateContent(f0, mergedData.footer.f0);
+                updateContent(f1, mergedData.footer.f1);
+                updateContent(f2, mergedData.footer.f2);
+                updateContent(f3, mergedData.footer.f3);
+                updateContent(f4, mergedData.footer.f4);
+                updateContent(f5, mergedData.footer.f5);
+                updateContent(f6, mergedData.footer.f6);
+                updateContent(f7, mergedData.footer.f7);
+                updateContent(f8, mergedData.footer.f8);
+                updateContent(f9, mergedData.footer.f9);
+                updateBackgroundColor(g0, mergedData.color.nav);
+                updateBackgroundColor(g4, mergedData.color.client);
+                updateBackgroundColor(g6, mergedData.color.footer);
 
             } else if (fileName === 'product.html') {
-                updateLinkContent(nav0, jsonData.nav.nav0);
-                updateLinkContent(nav1, jsonData.nav.nav1);
-                updateLinkContent(nav2, jsonData.nav.nav2);
-                updateLinkContent(nav3, jsonData.nav.nav3);
-                updateLinkContent(nav4, jsonData.nav.nav4);
-                updateContent(p0, jsonData.product.p0);
-                updateContent(p1, jsonData.product.p1);
-                updateContent(p2, jsonData.product.p2);
-                updateContent(p3, jsonData.product.p3);
-                updateContent(p4, jsonData.product.p4);
-                updateContent(p5, jsonData.product.p5);
-                updateContent(f0, jsonData.footer.f0);
-                updateContent(f1, jsonData.footer.f1);
-                updateContent(f2, jsonData.footer.f2);
-                updateContent(f3, jsonData.footer.f3);
-                updateContent(f4, jsonData.footer.f4);
-                updateContent(f5, jsonData.footer.f5);
-                updateContent(f6, jsonData.footer.f6);
-                updateContent(f7, jsonData.footer.f7);
-                updateContent(f8, jsonData.footer.f8);
-                updateContent(f9, jsonData.footer.f9);
-                updateBackgroundColor(g0, jsonData.color.nav);
-                updateBackgroundColor(g3, jsonData.color.product);
-                updateBackgroundColor(g6, jsonData.color.footer);
+                updateLinkContent(nav0, mergedData.nav.nav0);
+                updateLinkContent(nav1, mergedData.nav.nav1);
+                updateLinkContent(nav2, mergedData.nav.nav2);
+                updateLinkContent(nav3, mergedData.nav.nav3);
+                updateLinkContent(nav4, mergedData.nav.nav4);
+                updateContent(p0, mergedData.product.p0);
+                updateContent(p1, mergedData.product.p1);
+                updateContent(p2, mergedData.product.p2);
+                updateContent(p3, mergedData.product.p3);
+                updateContent(p4, mergedData.product.p4);
+                updateContent(p5, mergedData.product.p5);
+                updateContent(f0, mergedData.footer.f0);
+                updateContent(f1, mergedData.footer.f1);
+                updateContent(f2, mergedData.footer.f2);
+                updateContent(f3, mergedData.footer.f3);
+                updateContent(f4, mergedData.footer.f4);
+                updateContent(f5, mergedData.footer.f5);
+                updateContent(f6, mergedData.footer.f6);
+                updateContent(f7, mergedData.footer.f7);
+                updateContent(f8, mergedData.footer.f8);
+                updateContent(f9, mergedData.footer.f9);
+                updateBackgroundColor(g0, mergedData.color.nav);
+                updateBackgroundColor(g3, mergedData.color.product);
+                updateBackgroundColor(g6, mergedData.color.footer);
 
             }
         })
