@@ -289,6 +289,7 @@ button {
 
 .book_bt {
     width: 170px;
+    color: white;
     float: left;
     margin-top: 10px;
 }
@@ -353,7 +354,7 @@ button {
 .all_text {
     color: #ffffff;
     background-color: #424242;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 3px;
     font-size: 18px;
     position: relative;
@@ -379,9 +380,9 @@ button {
 }
 
 #my_slider a.carousel-control-next {
-    position: absolute;
-    left: 100px;
-    top: 76%;
+   float:right;
+    background-color: #252525;
+    margin-top: 10%;
 }
 
 #my_slider .carousel-control-prev,
@@ -396,10 +397,9 @@ button {
 }
 
 #my_slider a.carousel-control-prev {
-    position: absolute;
-    left: 70px;
-    top: 62%;
+    float:left;
     background-color: #252525;
+    margin-top: 10%;
 }
 
 #my_slider .carousel-control-prev,
@@ -586,6 +586,7 @@ button {
 
 .seemore_bt {
     width: 170px;
+    color: black;
     margin: 0 auto;
     text-align: center;
 }
@@ -644,7 +645,9 @@ button {
 
 .seemore_bt_1 {
     width: 170px;
-    float: right;
+    color: black;
+    margin: 0 auto; 
+    
 }
 
 .seemore_bt_1 a {
@@ -726,6 +729,7 @@ button {
 }
 
 .feature_box_2 {
+    margin-top: 70px;
     width: 100%;
     float: left;
     background-color: #ffffff;
@@ -787,9 +791,8 @@ button {
 }
 
 #main_slider a.carousel-control-next {
-    position: absolute;
-    right: 200px;
-    top: 92%;
+    right: 65px;
+    top: 70%;
 }
 
 #main_slider .carousel-control-prev,
@@ -804,10 +807,9 @@ button {
 }
 
 #main_slider a.carousel-control-prev {
-    position: absolute;
-    left: 75%;
-    top: 92%;
-    background-color: #853de5;
+    background-color: #000000;
+    top: 70%;
+    margin-left: 95px;
 }
 
 #main_slider .carousel-control-prev,
